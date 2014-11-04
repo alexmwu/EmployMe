@@ -2,7 +2,7 @@
 	<head>
 <meta charset="utf-8">
 		<meta name="author" content="Alex Wu , Ethan Chen">
-		<meta name="description" content="Prepare for your next technical interview with EmployMe.">
+		<meta name="description" content="Prepare for your next technical interview with EmployMe. Sort by company or by question type.">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" />
 		<title>EmployMe. All your interviewing needs.</title>
 	</head>
