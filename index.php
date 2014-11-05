@@ -9,8 +9,9 @@
 
 	<body>
 <!-- 		<?php echo "Hello World"; ?>-->
+<!--		<a href="sign_up.php">Sign Up</a>-->
 		<div class="section" id="banner">
-			<img src="img/tux.svg" alt="Tux">
+			<a href="sign_up.php"><img src="img/tux.svg" alt="Tux"></a>
 		</div>
 
 		<!-- later, will pull popular questions based on the database-->

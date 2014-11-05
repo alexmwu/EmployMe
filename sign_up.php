@@ -11,11 +11,19 @@
 		<h1>Sign Up</h1>
 		<form action="create_user.php" method="post">
 		Username: <input type="textbox" name="username">
+		<br>
 		First Name: <input type="textbox" name="first_name">
+		<br>
 		Last Name: <input type="textbox" name="last_name">
+		<br>
 		School: <input type="textbox" name="school">
+		<br>
 		Major: <input type="textbox" name="major">
+		<br>
 		Graduation: <input type="textbox" name="graduation">
+		<br>
+		<input type="submit">
 		</form>
 	</body>
 </html>
+
