@@ -9,7 +9,7 @@
 
 	<body>
 		<h1>Post Question</h1>
-		<form action="create_post.php" method="post">
+		<form action="create_question.php" method="post">
 		Title: <input type="textbox" name="title">
 		<br>
 		Be more specific: <input type="textbox" name="content">

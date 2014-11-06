@@ -1,24 +1,11 @@
-<p></p>
-
 <?php 
 
 //connecting
 
-$link = mysqli_connect('localhost', 'tweninge', 'pw', 'tweninge');
-if($link->connect_errno){
-	echo "problem" . $link->connect_errno . ': ' . $link->connect_error;
-}
-
-//prepare stament
-$stmt = $link->prepare("insert into user_age (age) values (?);");
-
-//bind parameters
-$stmt->bind_param("i", $_GET['age']);
-
-$stmt->execute();
+$link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Problem connecting to database.");
 
 //query
-$query = 'SELECT age from user_age;';
+$query = 'SELECT title,username,content,difficult_stars,difficult_votes,modified FROM questions;';
 $result = $link->query($query) or die ('Query Failed');
 
 echo '<table border = "1">';
