@@ -3,41 +3,40 @@
 //connecting
 
 
-$link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Problem connecting to database.");
+$link = mysqli_connect('localhost', 'awu3', 'hellomysql','awu3') or die("Problem connecting to database.");
 
-
+//mysqli_select_db('awu3') or die('Could not use database');
 
 //query
-$uname=$_POST['username'];
-$pword=$_POST['password'];
+$username=$_POST['username'];
+$password=$_POST['password'];
+$pw="";
 
+$query = $link->prepare("SELECT password FROM users where username = ? LIMIT 1");
+$query->bind_param('s',$username);
+$query->execute() or die("Failed to execute query.");
+$query->bind_result($pw);
+$query->store_result();
+if(!$query->fetch()) die("User " . $username . " does not exist"); 
+if($pw!=$password) die("Incorrect username and password");
+echo $password;
+setcookie("user",$username,time()+(86400*30),"/");//keep username for 86400sec (day) * 30= 30 days, works for all directories (/)
+header("Location: index.php");
+die();
 
-$query = $link->prepare("select password FROM users where username = ? LIMIT 1");
-
-if ($query) {
-  $query->bind_param('i',$uname);
-  $query->execute();
-  $query->bind_result($stored_pw);
-  echo $stored_pw;
+/*
+echo '<table border = "1">';
+while($tuple = mysqli_fetch_array($result, MYSQL_ASSOC)){
+echo '<tr>';
+        foreach($tuple as $colvalue){
+                echo '<td>'.$colvalue.'</td>';
+        }
+echo '</tr>';
 }
-
-#echo $query;
-
-#$result = $link->query($query) or die ('Query Failed');
-
-
-#echo '<table border = "1">';
-#while($tuple = mysqli_fetch_array($result, MYSQL_ASSOC)){
-#echo '<tr>';
-#        foreach($tuple as $colvalue){
-#                echo '<td>'.$colvalue.'</td>';
-#        }
-#echo '</tr>';
-#}
-#echo '</table>';
+echo '</table>';
 
 mysqli_free_result($result);
 
 mysqli_close($link);
-
+*/
 ?>
