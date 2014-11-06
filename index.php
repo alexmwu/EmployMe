@@ -14,6 +14,7 @@
 		<!-- banner for the site-->
 		<div class="section" id="banner">
 			<a href="sign_up.php"><img src="img/tux.svg" alt="Tux"></a>
+			<a href="add_company.php"><img src="img/apache.svg" alt="Apache HTTP Server"></a>
 			<a href="post_question.php"><img src="img/mysql.svg" alt="MySQL"></a>
 		</div>
 

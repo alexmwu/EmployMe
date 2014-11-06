@@ -12,6 +12,8 @@
 		<form action="create_user.php" method="post">
 		Username: <input type="textbox" name="username">
 		<br>
+		Password: <input type="password" name="password">
+		<br>
 		First Name: <input type="textbox" name="first_name">
 		<br>
 		Last Name: <input type="textbox" name="last_name">
