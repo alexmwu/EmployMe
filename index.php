@@ -9,8 +9,8 @@
 
 	<body>
 		<!--header here-->
-
-
+		<form action="sign_in.php"><input type="submit" value="Sign In"></form>
+		<form action="sign_up.php"><input type="submit" value="Sign Up"></form>
 		<!-- banner for the site-->
 		<div class="section" id="banner">
 			<a href="sign_up.php"><img src="img/tux.svg" alt="Tux"></a>
