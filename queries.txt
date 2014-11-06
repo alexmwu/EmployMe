@@ -1,0 +1,3 @@
+#this query returns all questions that are tagged with companies
+
+SELECT title,username,content,difficult_stars,difficult_votes,modified,name FROM questions,companies WHERE questions.company_id=companies.company_id;
