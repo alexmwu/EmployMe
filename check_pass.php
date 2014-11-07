@@ -24,19 +24,7 @@ setcookie("user",$username,time()+(86400*30),"/");//keep username for 86400sec (
 header("Location: index.php");
 die();
 
-/*
-echo '<table border = "1">';
-while($tuple = mysqli_fetch_array($result, MYSQL_ASSOC)){
-echo '<tr>';
-        foreach($tuple as $colvalue){
-                echo '<td>'.$colvalue.'</td>';
-        }
-echo '</tr>';
-}
-echo '</table>';
-
 mysqli_free_result($result);
 
 mysqli_close($link);
-*/
 ?>

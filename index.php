@@ -9,8 +9,20 @@
 
 	<body>
 		<!--header here-->
+		<?php
+			if(isset($_COOKIE["user"])){
+				echo "Welcome " . $_COOKIE["user"] . "!\n";
+				echo "\n";
+				echo '<form action="log_out.php"><input type="submit" value="Log Out"></form>';
+				echo '<form action="edit_user.php"><input type="submit" value="Edit Account"></form>';
+
+			}
+			else{
+				echo '
 		<form action="sign_in.php"><input type="submit" value="Sign In"></form>
-		<form action="sign_up.php"><input type="submit" value="Sign Up"></form>
+		<form action="sign_up.php"><input type="submit" value="Sign Up"></form>';
+			}
+?>
 		<!-- banner for the site-->
 		<div class="section" id="banner">
 			<form action="post_question.php"><input type="submit" value="Post Question"></form>
@@ -18,7 +30,7 @@
 			<form action="show_questions.php"><input type="submit" value="All Questions">
 			
 		</div>
-
+		
 		<!-- some of the best example questions-->
 		<div class="section" id="featured">
 

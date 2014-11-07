@@ -9,11 +9,11 @@ $link=mysqli_connect('localhost','awu3','hellomysql','awu3') or die("Problem con
 
 //prepare statement
 $today=date("Y/m/d");
-$statement=$link->prepare("INSERT INTO users (username,password,first_name,last_name,school,major,score,graduation_time,created) values(?,?,?,?,?,?,?,?,?);");
+$statement=$link->prepare("UPDATE users SET password=? WHERE username=?;");
 
 //bind
 $init=0;
-$statement->bind_param("ssssssiss",$_POST['username'],$_POST['password'],$_POST['first_name'],$_POST['last_name'],$_POST['school'],$_POST['major'],$init,$_POST['graduation'],$today);
+$statement->bind_param("ss",$_POST['new_password'],$_COOKIE['user']);
 
 //execute
 $statement->execute() or die("Username already exists");
