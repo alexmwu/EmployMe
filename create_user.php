@@ -8,6 +8,8 @@ $link=mysqli_connect('localhost','awu3','hellomysql','awu3') or die("Problem con
 //mysql_select_db('awu3') or die('Could not use database!');
 
 //prepare statement
+date_default_timezone_set('America/New_York');
+date_default_timezone_get();
 $today=date("Y/m/d");
 $statement=$link->prepare("INSERT INTO users (username,password,first_name,last_name,school,major,score,graduation_time,created) values(?,?,?,?,?,?,?,?,?);");
 

@@ -8,6 +8,7 @@ $link=mysqli_connect('localhost','awu3','hellomysql','awu3') or die("Problem con
 //mysql_select_db('awu3') or die('Could not use database!');
 
 //prepare statement
+mysql_
 $today=date("Y/m/d");
 $statement=$link->prepare("INSERT INTO questions (username,content,difficult_stars,difficult_votes,company_id,created,title) values(?,?,?,?,?,?,?);");
 
