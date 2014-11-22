@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <html>
 	<head>
 <meta charset="utf-8">
@@ -10,8 +13,10 @@
 	<body>
 		<!--header here-->
 		<?php
-			if(isset($_COOKIE["user"])){
-				echo "Welcome " . $_COOKIE["user"] . "!\n";
+			if(isset($_SESSION["user"])){
+				//echo "Welcome " . $_COOKIE["user"] . "!\n";
+
+				echo "Welcome ".$_SESSION["user"]."!\n";
 				echo "\n";
 				echo '<form action="log_out.php"><input type="submit" value="Log Out"></form>';
 				echo '<form action="edit_user.php"><input type="submit" value="Edit Account"></form>';

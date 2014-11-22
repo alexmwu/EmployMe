@@ -19,8 +19,12 @@ $query->bind_result($pw);
 $query->store_result();
 if(!$query->fetch()) die("User " . $username . " does not exist"); 
 if($pw!=$password) die("Incorrect username and password");
-echo $password;
-setcookie("user",$username,time()+(86400*30),"/");//keep username for 86400sec (day) * 30= 30 days, works for all directories (/)
+
+session_start();
+$_SESSION['user']=$username;
+
+//setcookie("user",$username,time()+(86400*30),"/");//keep username for 86400sec (day) * 30= 30 days, works for all directories (/)
+
 header("Location: index.php");
 die();
 
