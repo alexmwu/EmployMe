@@ -33,7 +33,7 @@ session_start()
 			<form action="post_question.php"><input type="submit" value="Post Question"></form>
 			<form action="add_company.php"><input type="submit" value="Add Company"></form>
 			<form action="show_questions.php"><input type="submit" value="All Questions"></form>
-			<form action="catalog.php"><input type="submit" value="Catalog"></form>
+			<form action="questions.php"><input type="submit" value="Catalog"></form>
 		</div>
 		
 		<!-- some of the best example questions-->

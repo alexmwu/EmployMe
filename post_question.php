@@ -14,6 +14,12 @@
 		<br>
 		Be more specific: <input type="textbox" name="content">
 		<br>
+
+		<!--suggestions for company and tag-->
+		Company: <input type="textbox" name="company">
+		<br>
+		Other tags: <input type="textbox" name="company">
+		<br>
 		<input type="submit">
 		</form>
 	</body>
