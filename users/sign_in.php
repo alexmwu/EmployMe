@@ -9,7 +9,7 @@
 
 	<body>
 		<h1>Sign In</h1>
-		<form action="check_pass.php" method="post">
+		<form action="../auth/check_pass.php" method="post">
 		Username: <input type="textbox" name="username">
 		<br>
 		Password: <input type="password" name="password">

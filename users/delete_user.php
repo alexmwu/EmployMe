@@ -21,7 +21,7 @@ $statement->execute() or die("Username does not exist");
 
 //unset($_COOKIE['user']);
 session_destroy();
-header("Location: index.php");
+header("Location: ../index.php");
 //close
 mysqli_close($link);
 ?>

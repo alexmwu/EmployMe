@@ -25,7 +25,7 @@ $_SESSION['user']=$username;
 
 //setcookie("user",$username,time()+(86400*30),"/");//keep username for 86400sec (day) * 30= 30 days, works for all directories (/)
 
-header("Location: index.php");
+header("Location: ../index.php");
 die();
 
 mysqli_free_result($result);

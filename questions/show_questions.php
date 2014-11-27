@@ -5,7 +5,7 @@
 $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Problem connecting to database.");
 
 //query
-$query = 'SELECT title,username,content,difficult_stars,difficult_votes,modified from questions;';
+$query = 'SELECT * from questions;';
 $result = $link->query($query) or die ('Query Failed');
 
 echo '<table border = "1">';

@@ -11,9 +11,9 @@
 		<!--header here-->
 		<!-- banner for the site-->
 			<form action="delete_user.php"><input type="submit" value="Delete User"></form>
-			<form action="change_password.php" method="post">
+			<form action="../auth/change_password.php" method="post">
 <!--				Old Password: <input type="textbox" name="old_password">-->
-				New Password: <input type="textbox" name="new_password">
+				New Password: <input type="password" name="new_password">
 				<!-- need confirm password here-->	
 				<input type="submit" value="Change Password">
 			</form>

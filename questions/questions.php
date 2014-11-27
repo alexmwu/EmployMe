@@ -8,7 +8,7 @@ $company_query = "select * from companies;";
 $companies = $link->query($company_query) or die('Company Query Failed');
 echo '<div>';	//div for left aligned block
 while($tuple = mysqli_fetch_array($companies, MYSQL_ASSOC)){
-	echo '<a href="company.php?id='.$tuple['company_id'].'">';
+	echo '<a href="../companies/company.php?id='.$tuple['company_id'].'">';
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['name'].'<br>';
@@ -26,7 +26,7 @@ $topics = $link->query($topic_query) or die ('Topic Query Failed');
 
 echo '<div>';
 while($tuple = mysqli_fetch_array($topics, MYSQL_ASSOC)){
-	echo '<a href="topic.php?id='.$tuple['topic_id'].'">';
+	echo '<a href="../topics/topic.php?id='.$tuple['topic_id'].'">';
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['name'].'<br>';
