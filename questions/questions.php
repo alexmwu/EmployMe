@@ -8,12 +8,14 @@ $company_query = "select * from companies;";
 $companies = $link->query($company_query) or die('Company Query Failed');
 echo '<div>';	//div for left aligned block
 while($tuple = mysqli_fetch_array($companies, MYSQL_ASSOC)){
+	echo '<a href="company.php?id='.$tuple['company_id'].'">';
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['name'].'<br>';
 	echo $tuple['about'].'<br>';
 	echo '</p>'; 
-	echo '</div>';	
+	echo '</div>';
+	echo '</a>';
 }
 
 echo '</div>';
@@ -21,14 +23,17 @@ echo '</div>';
 //query for all topics
 $topic_query = "select * from topics;";
 $topics = $link->query($topic_query) or die ('Topic Query Failed');
+
 echo '<div>';
 while($tuple = mysqli_fetch_array($topics, MYSQL_ASSOC)){
+	echo '<a href="topic.php?id='.$tuple['topic_id'].'">';
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['name'].'<br>';
 	echo $tuple['about'].'<br>';
 	echo '</p>'; 
 	echo '</div>';	
+	echo '</a>';
 }
 echo '</div>';
 
@@ -38,6 +43,7 @@ $questions = $link->query($question_query) or die ('Question Query Failed');
 
 echo '<div>';	//div for right aligned block
 while($tuple = mysqli_fetch_array($questions, MYSQL_ASSOC)){
+	echo '<a href="question.php?id='.$tuple['question_id'].'">';
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['title'].'<br>';
@@ -47,6 +53,7 @@ while($tuple = mysqli_fetch_array($questions, MYSQL_ASSOC)){
 	echo $tuple['modified'].'<br>';
 	echo '</p>'; 
 	echo '</div>';
+	echo '</a>';
 }
 echo '</div>';
 
