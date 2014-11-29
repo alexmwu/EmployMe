@@ -13,8 +13,30 @@ $comments = $link->query($comment_query) or die ('Comment Query Failed');
 $answer_query = "select * from answers where question_id=".intval($_GET['id']).";";
 $answers = $link->query($answer_query) or die ('Answer Query Failed');
 
+$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
+?>
+
+<html>
+	<head>
+<meta charset="utf-8">
+		<meta name="author" content="Alex Wu , Ethan Chen">
+		<meta name="description" content="Template.">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" />
+		<title><?php 
+		if($tuple['title']!=NULL){
+			echo $tuple['title'];
+		}
+		else{
+			echo $tuple['content'];
+		}
+		?></title>
+	</head>
+
+	<body>
+	
+
+<?php
 echo '<div>';
-	$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['title'].'<br>';
@@ -36,6 +58,11 @@ echo '<div>';
 		echo '</div>';	
 	}
 echo '</div>';
+?>
+
+<form>
+
+<?php
 
 echo '<div>';
 	$answer = mysqli_fetch_array($answers, MYSQL_ASSOC);
@@ -68,3 +95,7 @@ mysqli_free_result($questions);
 mysqli_close($link);
 
 ?>
+
+	</body>
+</html>
+
