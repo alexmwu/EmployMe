@@ -1,6 +1,6 @@
 <?php 
 //connecting
-
+session_start();
 $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Problem connecting to database.");
 
 //query for all questions
@@ -62,14 +62,16 @@ echo '<div>';
 	echo $tuple['modified'].'<br>';
 	echo '</p>'; 
 	echo '</div>';
-?>
 
-<form> 
-<input type="textbox" name="content">
-<input type="button" value="Edit Question" onClick="post(0, 2/*intval($_GET['page_id'])*/,this.form)">
-</form>
+if(isset($_SESSION['user'])){
+	?>
+	<form>
+	<input type="textbox" name="content">
+	<input type="button" value="Edit Question" onClick="<?php echo "post(0,".$_GET['id'].",this.form)"; ?> ">
+	</form>
+	<?php
+}
 
-<?php
 	$tuple = mysqli_fetch_array($comments, MYSQL_ASSOC);
 	if($tuple){
 		if($tuple['answer_id']==NULL){

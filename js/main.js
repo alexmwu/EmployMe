@@ -33,4 +33,6 @@ function post(post_type, page_id, form)
       }
    });
 
+   history.go(0);
+
 }
