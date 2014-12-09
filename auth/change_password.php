@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //connecting
 
 $link=mysqli_connect('localhost','awu3','hellomysql','awu3') or die("Problem connecting to database.");
@@ -8,14 +8,13 @@ $link=mysqli_connect('localhost','awu3','hellomysql','awu3') or die("Problem con
 //mysql_select_db('awu3') or die('Could not use database!');
 
 //prepare statement
-date_default_timezone_set('America/New_York');
-date_default_timezone_get();
-$today=date("Y/m/d");
+//date_default_timezone_set('America/New_York');
+//date_default_timezone_get();
+//$today=date("Y/m/d");
 $statement=$link->prepare("UPDATE users SET password=? WHERE username=?;");
-
 //bind
 $init=0;
-$statement->bind_param("ss",$_POST['new_password'],$_COOKIE['user']);
+$statement->bind_param("ss",$_POST['new_password'],$_SESSION['user']);
 
 //execute
 $statement->execute() or die("Username already exists");

@@ -139,20 +139,23 @@ while($answer = mysqli_fetch_array($answers, MYSQL_ASSOC)){
 }
 echo '</div>';
 
-if(isset($_SESSION['user'])){
+/*if(isset($_SESSION['user'])){
 	?>
 <form>
 	<input type="textbox" name="addAnswerComment">
 	<input type="button" value="Add Comment">
 </form>
 <?php
-}
+}*/
+
+//<input type="textbox" name="editQuestionContent" placeholder="'+questionContent+'">
+//<input type="button" value="Edit Question" onClick="post(0,'+page_id+',this.form)">'
 
 if(isset($_SESSION['user'])){
 	?>
 <form>
-	<input type="textbox" name="editAnswer">
-	<input type="button" value="Add Answer">
+	<input type="textbox" name="editAnswer" placeholder="Answer the Question">
+	<input type="button" value="Add Answer" onclick="<?php echo "post(1,".$_GET['id'].",this.form)";?> ">
 </form>
 <?php
 	}
