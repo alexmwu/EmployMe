@@ -65,8 +65,8 @@ echo '<div id="question">';
 
 if(isset($_SESSION['user'])){
 	?>
-		<form>
-			<button name="editQuestion" onClick="<?php echo "userEditPost(0,".$_GET['id'].",this.form)";?> ">
+		<form id="editQuestion">
+			<button onClick="<?php echo "userEditPost(0,".$_GET['id'].")";?> ">
 			Edit Question</button>
 		</form>
 	<?php
