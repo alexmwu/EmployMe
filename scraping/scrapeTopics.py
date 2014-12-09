@@ -27,13 +27,10 @@ import unicodedata
 
 driver = webdriver.Chrome()	
 driver.get('http://www.careercup.com/page')
-dropdown = driver.find_element_by_xpath("//select[@id='company']")
-companies = [x.text for x in dropdown.find_elements_by_tag_name("option")][1:]
+dropdown = driver.find_element_by_xpath("//select[@id='topic']")
+topics = [x.text for x in dropdown.find_elements_by_tag_name("option")][1:]
 i = 0
-print '[',
-for element in companies:
+for element in topics:
 	i += 1
-	if i > 1: print ',',
-	print '"' + element + '"',
-print ']'
+	print str(i) + '\t' + element
 driver.close()

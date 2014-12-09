@@ -1,0 +1,71 @@
+1	Algorithm
+2	Android
+3	Application / UI Design
+4	Arrays
+5	Assembly
+6	Automata
+7	Behavioral
+8	Bit Manipulation
+9	Brain Teasers
+10	C
+11	C
+12	C++
+13	Cache
+14	Coding
+15	Compiler
+16	Computer Architecture & Low Level
+17	computer network
+18	Data Mining
+19	Data Structures
+20	Database
+21	Debugging
+22	Distributed Computing
+23	Dynamic Programming
+24	Experience
+25	Front End Web Development
+26	General Questions and Comments
+27	Graphics
+28	Hash Table
+29	Ideas
+30	Java
+31	JavaScript
+32	Knowledge Based
+33	Large Scale Computing
+34	Linked Lists
+35	Linux Kernel
+36	Math & Computation
+37	Matlab
+38	Matrix
+39	Network
+40	Networking / Web / Internet
+41	Object Oriented Design
+42	Online Test
+43	Operating System
+44	Operators
+45	Perl
+46	PHP
+47	Probability
+48	Problem Solving
+49	Puzzle
+50	Python
+51	Questions YOU should ask!
+52	Replacing multiple string occurences from a text
+53	Sales
+54	Security
+55	Sets
+56	Sorting
+57	SQL
+58	Stacks
+59	String Manipulation
+60	System Administration
+61	System Design
+62	technical
+63	Terminology & Trivia
+64	test
+65	Testing
+66	Threads
+67	Trees and Graphs
+68	Unix
+69	unix system programmin
+70	unix system programming
+71	XML
