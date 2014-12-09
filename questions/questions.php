@@ -12,7 +12,7 @@ while($tuple = mysqli_fetch_array($companies, MYSQL_ASSOC)){
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['name'].'<br>';
-	echo $tuple['about'].'<br>';
+//	echo $tuple['about'].'<br>';
 	echo '</p>'; 
 	echo '</div>';
 	echo '</a>';
@@ -30,7 +30,7 @@ while($tuple = mysqli_fetch_array($topics, MYSQL_ASSOC)){
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['name'].'<br>';
-	echo $tuple['about'].'<br>';
+//	echo $tuple['about'].'<br>';
 	echo '</p>'; 
 	echo '</div>';	
 	echo '</a>';
