@@ -34,6 +34,7 @@ session_start()
 			<form action="companies/add_company.php"><input type="submit" value="Add Company"></form>
 			<form action="questions/show_questions.php"><input type="submit" value="All Questions"></form>
 			<form action="questions/questions.php"><input type="submit" value="Catalog"></form>
+			<form action=""><input type="textbox" name="searchBox"><input type="submit" value="Search"></form>
 		</div>
 		
 		<!-- some of the best example questions-->

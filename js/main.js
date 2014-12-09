@@ -1,7 +1,7 @@
 //for posting answers, comments, and editing
 function post(post_type, page_id, form)
 {
-	content=form.content.value;
+	content=form.editQuestionContent.value;
 	if(post_type='edit_question'){
 		type=0;
 	}
@@ -38,9 +38,14 @@ function post(post_type, page_id, form)
 }
 
 function userEditPost(post_type,page_id){
-	var questionContent = document.getElementById('question');
+	var question = document.getElementById('questionContent');
 	var editQuestion = document.getElementById('editQuestion');
+	var questionContent = question.innerHTML;
 	if(post_type==0){
-		editQuestion.innerHTML='<input type="textbox" name="content"><input type="button" value="Edit Question" onClick="post(0,'+page_id+',this.form)">';
-	}	
+		editQuestion.innerHTML='<input type="textbox" name="editQuestionContent" placeholder="'+questionContent+'"><input type="button" value="Edit Question" onClick="post(0,'+page_id+',this.form)">';
+		var content = document.getElementsByName('editQuestionContent')[0];
+		content.value = questionContent;
+	}
+	
+
 }

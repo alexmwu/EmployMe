@@ -57,8 +57,10 @@ echo '<div id="question">';
 	echo '<p>';
 	echo $tuple['title'].'<br>';
 	echo "Asked by: ".$tuple['username'].'<br>';
-	echo $tuple['content'].'<br>';
-	echo $tuple['votes'].'<br>';
+	echo '<div id="questionContent">';
+	echo $tuple['content'];
+	echo '</div>';
+//	echo $tuple['votes'].'<br>';
 	echo $tuple['modified'].'<br>';
 	echo '</p>'; 
 	echo '</div>';
@@ -72,50 +74,88 @@ if(isset($_SESSION['user'])){
 	<?php
 }
 
-	$tuple = mysqli_fetch_array($comments, MYSQL_ASSOC);
+/*
+$answercomments=array();
+while($tuple = mysqli_fetch_array($comments, MYSQL_ASSOC)){
 	if($tuple){
 		if($tuple['answer_id']==NULL){
 			echo '<div>';
 			echo '<p>';
 			echo "Posted by: ".$tuple['username'].'<br>';
 			echo $tuple['content'].'<br>';
-			echo $tuple['votes'].'<br>';
+		//	echo $tuple['votes'].'<br>';
 			echo '</p>';
-			echo '</div>';	
+			echo '</div>';
+		}
+		else{
+			$answercomments[]=$tuple;
 		}
 	}
 echo '</div>';
+}
+
+if(isset($_SESSION['user'])){
 ?>
-
-<form action="<?php?>">
-
+<form>
+	<input type="textbox" name="addQuestionComment">
+	<input type="button" value="Add Comment">
+</form>
 <?php
+}
+*/
 
 echo '<div>';
-	$answer = mysqli_fetch_array($answers, MYSQL_ASSOC);
+while($answer = mysqli_fetch_array($answers, MYSQL_ASSOC)){
 	if($answer){
 		echo '<div>';
 		echo '<p>';
 		echo $answer['title'].'<br>';
 		echo "Answered by: ".$answer['username'].'<br>';
 		echo $answer['content'].'<br>';
-		echo $answer['votes'].'<br>';
+	//	echo $answer['votes'].'<br>';
 		echo $answer['modified'].'<br>';
 		echo '</p>'; 
 		echo '</div>';
-
-		$comment = mysqli_fetch_array($comments, MYSQL_ASSOC);
-		if($comment['answer_id']==$answer['answer_id']){
+	}
+/*	if(isset($_SESSION['user'])){
+	?>
+		<form id="editAnswer">
+			<button onClick="<?php echo "userEditPost(0,".$_GET['id'].")";?> ">
+			Edit Question</button>
+		</form>
+	<?php
+	}
+	foreach($answercomments as $comment){
+		if(intval($comment['answer_id'])==intval($answer['answer_id'])){
 			echo '<div>';
 			echo '<p>';
 			echo "Posted by: ".$comment['username'].'<br>';
 			echo $comment['content'].'<br>';
-			echo $comment['votes'].'<br>';
+		//	echo $comment['votes'].'<br>';
 			echo '</p>';
 			echo '</div>';	
 		}
-	}
+	}*/
+}
 echo '</div>';
+
+if(isset($_SESSION['user'])){
+	?>
+<form>
+	<input type="textbox" name="addAnswerComment">
+	<input type="button" value="Add Comment">
+</form>
+<?php
+}
+
+if(isset($_SESSION['user'])){
+	?>
+<form>
+	<input type="textbox" name="editAnswer">
+	<input type="button" value="Add Answer">
+</form>
+<?php
+	}
 
 mysqli_free_result($questions);
 
@@ -129,4 +169,3 @@ mysqli_close($link);
         <script src="../js/main.js"></script>
 	</body>
 </html>
-
