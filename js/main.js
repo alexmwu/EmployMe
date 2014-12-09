@@ -36,3 +36,14 @@ function post(post_type, page_id, form)
    history.go(0);
 
 }
+
+function userEditPost(post_type,page_id){
+	var questionContent=document.getElementById('question');
+	console.log("swag");
+	if(post_type=0){
+		form.innerHTML('
+	<input type="textbox" name="content">
+	<input type="button" value="Edit Question" onClick="post(0,page_id,this.form)">
+	');
+	}
+}

@@ -52,7 +52,7 @@ $tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
         <![endif]-->
 
 <?php
-echo '<div>';
+echo '<div id="question">';
 	echo '<div>';
 	echo '<p>';
 	echo $tuple['title'].'<br>';
@@ -65,10 +65,10 @@ echo '<div>';
 
 if(isset($_SESSION['user'])){
 	?>
-	<form>
-	<input type="textbox" name="content">
-	<input type="button" value="Edit Question" onClick="<?php echo "post(0,".$_GET['id'].",this.form)"; ?> ">
-	</form>
+		<form>
+			<button name="editQuestion" onClick="<?php echo "userEditPost(0,".$_GET['id'].",this.form)";?> ">
+			Edit Question</button>
+		</form>
 	<?php
 }
 
@@ -87,7 +87,7 @@ if(isset($_SESSION['user'])){
 echo '</div>';
 ?>
 
-<form action="<?php?>"
+<form action="<?php?>">
 
 <?php
 
