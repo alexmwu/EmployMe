@@ -1,0 +1,368 @@
+1	A9	Employ me!!!
+2	aaa	Employ me!!!
+3	abc	Employ me!!!
+4	Abs india pvt. ltd.	Employ me!!!
+5	Accenture	Employ me!!!
+6	Achieve Internet	Employ me!!!
+7	Adap.tv	Employ me!!!
+8	Adobe	Employ me!!!
+9	ADP	Employ me!!!
+10	Advent	Employ me!!!
+11	Advisory Board Company	Employ me!!!
+12	Agilent Technologies	Employ me!!!
+13	Akamai	Employ me!!!
+14	Alcatel Lucent	Employ me!!!
+15	Alliance Global Servies	Employ me!!!
+16	Altera	Employ me!!!
+17	Amazon	Employ me!!!
+18	AMD	Employ me!!!
+19	Amdocs	Employ me!!!
+20	American Airlines	Employ me!!!
+21	Apache Design	Employ me!!!
+22	Apple	Employ me!!!
+23	AppNexus	Employ me!!!
+24	Argus	Employ me!!!
+25	Aricent	Employ me!!!
+26	Arista Networks	Employ me!!!
+27	Aristocrat Gaming	Employ me!!!
+28	Ask.com	Employ me!!!
+29	Aspire Systems	Employ me!!!
+30	ASU	Employ me!!!
+31	Athena Health	Employ me!!!
+32	Atmel	Employ me!!!
+33	Automated Traders Desk	Employ me!!!
+34	Autonomy Zantaz	Employ me!!!
+35	Axiom Sources	Employ me!!!
+36	Baidu	Employ me!!!
+37	Bank of America	Employ me!!!
+38	Barclays Capital	Employ me!!!
+39	Bazaarvoice	Employ me!!!
+40	Big Fish	Employ me!!!
+41	Bloomberg LP	Employ me!!!
+42	Blue Jeans	Employ me!!!
+43	Bocada	Employ me!!!
+44	Boeing	Employ me!!!
+45	Booking.com	Employ me!!!
+46	Boomerang Commerce	Employ me!!!
+47	Brainware	Employ me!!!
+48	Broadsoft	Employ me!!!
+49	BrowserStack	Employ me!!!
+50	BT	Employ me!!!
+51	Cadence Inc	Employ me!!!
+52	Capgemini	Employ me!!!
+53	CapitalIQ	Employ me!!!
+54	CareerCup	Employ me!!!
+55	Caritor	Employ me!!!
+56	Cavium Networks	Employ me!!!
+57	CCN	Employ me!!!
+58	CDAC-ACTS	Employ me!!!
+59	CGI-AMS	Employ me!!!
+60	Chegg.com	Employ me!!!
+61	Chelsio Communications	Employ me!!!
+62	Chicago Mercantile Exchange	Employ me!!!
+63	Chronus	Employ me!!!
+64	Cisco Systems	Employ me!!!
+65	Citigroup	Employ me!!!
+66	Citrix Online	Employ me!!!
+67	Citrix System Inc	Employ me!!!
+68	Cloudera	Employ me!!!
+69	Cloudmere, Inc.	Employ me!!!
+70	CMC LTD	Employ me!!!
+71	Cognzant Technology Solutions	Employ me!!!
+72	Collective	Employ me!!!
+73	Computer Associates	Employ me!!!
+74	Continental	Employ me!!!
+75	Credit Suisse	Employ me!!!
+76	CrimsonLogic	Employ me!!!
+77	Crompton Greeves	Employ me!!!
+78	CSC	Employ me!!!
+79	CSR	Employ me!!!
+80	Cubic Transportation Systems Limited	Employ me!!!
+81	D2L	Employ me!!!
+82	Daptiv	Employ me!!!
+83	Defense Research and Development Organization of India	Employ me!!!
+84	Deloitte Consulting LLP	Employ me!!!
+85	Delve Networks	Employ me!!!
+86	Denmin Group	Employ me!!!
+87	Deshaw Inc	Employ me!!!
+88	deutsche bank	Employ me!!!
+89	Did-it.com	Employ me!!!
+90	Directi	Employ me!!!
+91	Dover Organization	Employ me!!!
+92	Druva Software pvt ltd	Employ me!!!
+93	Ebay	Employ me!!!
+94	EFI	Employ me!!!
+95	Egenera	Employ me!!!
+96	Electronic Arts	Employ me!!!
+97	EMC	Employ me!!!
+98	Epic Systems	Employ me!!!
+99	Epsilon	Employ me!!!
+100	Ericsson	Employ me!!!
+101	Eterno Infotech Pvt Ltd	Employ me!!!
+102	Expedia	Employ me!!!
+103	EZ Prints	Employ me!!!
+104	F5 Networks	Employ me!!!
+105	Fabrix	Employ me!!!
+106	Facebook	Employ me!!!
+107	FactSet Research Systems, Inc	Employ me!!!
+108	Fair Issac	Employ me!!!
+109	Fiorano	Employ me!!!
+110	FlexTrade	Employ me!!!
+111	Flipkart	Employ me!!!
+112	Fortinet	Employ me!!!
+113	Future Advisor	Employ me!!!
+114	Future Group, Mumbai	Employ me!!!
+115	Fynanz	Employ me!!!
+116	Gartner	Employ me!!!
+117	Gayatri Vidya Parishad	Employ me!!!
+118	GE (General Electric)	Employ me!!!
+119	Georgia Pacific	Employ me!!!
+120	Global Scholar	Employ me!!!
+121	Globaltech Research	Employ me!!!
+122	Gluster	Employ me!!!
+123	GoDaddy	Employ me!!!
+124	Gold-Tier	Employ me!!!
+125	Goldman Sachs	Employ me!!!
+126	Google	Employ me!!!
+127	Green Bricks	Employ me!!!
+128	Groupon	Employ me!!!
+129	GrubHub	Employ me!!!
+130	Guruji	Employ me!!!
+131	Hackerrank	Employ me!!!
+132	Harman Kadron	Employ me!!!
+133	HCL	Employ me!!!
+134	HCL America	Employ me!!!
+135	Headrun Technologies Pvt Ltd	Employ me!!!
+136	Hewlett Packard	Employ me!!!
+137	Hi5	Employ me!!!
+138	Highbridge Capital	Employ me!!!
+139	Hired.com	Employ me!!!
+140	Home Depot	Employ me!!!
+141	Honeywell	Employ me!!!
+142	Huawei	Employ me!!!
+143	Hunan Asset	Employ me!!!
+144	Ibibo	Employ me!!!
+145	IBM	Employ me!!!
+146	Iconologic	Employ me!!!
+147	Igate	Employ me!!!
+148	IIT-D	Employ me!!!
+149	iLabs	Employ me!!!
+150	Imagination Technologies	Employ me!!!
+151	IMG	Employ me!!!
+152	Infibeam	Employ me!!!
+153	Infinium	Employ me!!!
+154	Informatica	Employ me!!!
+155	Infosys	Employ me!!!
+156	Initto	Employ me!!!
+157	InMobi	Employ me!!!
+158	Intel	Employ me!!!
+159	Intelligrape	Employ me!!!
+160	Interactive Brokers	Employ me!!!
+161	Interactive Design	Employ me!!!
+162	Internet Question	Employ me!!!
+163	InterraIT	Employ me!!!
+164	Intuit	Employ me!!!
+165	ION idea	Employ me!!!
+166	ION Trading	Employ me!!!
+167	iPowerFour	Employ me!!!
+168	Iron Mountain	Employ me!!!
+169	Ittiam Systems	Employ me!!!
+170	Ivycomptech	Employ me!!!
+171	Izon	Employ me!!!
+172	Jabong	Employ me!!!
+173	Jane Street	Employ me!!!
+174	JDA	Employ me!!!
+175	job tessio	Employ me!!!
+176	Josh	Employ me!!!
+177	JP Morgan	Employ me!!!
+178	Juniper Networks	Employ me!!!
+179	Kalido	Employ me!!!
+180	Kaseya	Employ me!!!
+181	Kerkestavni Computecha Corporatci	Employ me!!!
+182	Kingfisher	Employ me!!!
+183	Kingfisher Airlines	Employ me!!!
+184	Kiwox	Employ me!!!
+185	KLA Tencor	Employ me!!!
+186	Knewton	Employ me!!!
+187	Knoa Software	Employ me!!!
+188	Knowledge Systems	Employ me!!!
+189	KnowledgeBase	Employ me!!!
+190	Kohl's	Employ me!!!
+191	Komli Media	Employ me!!!
+192	Kpro Solutions	Employ me!!!
+193	Lab126	Employ me!!!
+194	Labs247	Employ me!!!
+195	Laserfiche	Employ me!!!
+196	LexisNexis	Employ me!!!
+197	Lime Labs	Employ me!!!
+198	Linkedin	Employ me!!!
+199	LiteratureBay.com	Employ me!!!
+200	Live Nation	Employ me!!!
+201	LiveRamp	Employ me!!!
+202	Lockheed Martin	Employ me!!!
+203	London Investment Bank	Employ me!!!
+204	LSI	Employ me!!!
+205	Lunatic Server Solutions	Employ me!!!
+206	MAGMA	Employ me!!!
+207	makemytrip	Employ me!!!
+208	Manhattan associates	Employ me!!!
+209	MAQ	Employ me!!!
+210	MarketRX	Employ me!!!
+211	Marketshare Inc.	Employ me!!!
+212	Marvell	Employ me!!!
+213	Mathworks	Employ me!!!
+214	McAfee	Employ me!!!
+215	Medio Systems	Employ me!!!
+216	Megasoft	Employ me!!!
+217	Mentor Graphics	Employ me!!!
+218	Micron	Employ me!!!
+219	Microsoft	Employ me!!!
+220	MicroStrategy	Employ me!!!
+221	MIH	Employ me!!!
+222	Mindtree Wireless India	Employ me!!!
+223	Model N	Employ me!!!
+224	Monitor Group	Employ me!!!
+225	Monotype	Employ me!!!
+226	Morgan Stanley	Employ me!!!
+227	Motorola	Employ me!!!
+228	MounzIT	Employ me!!!
+229	Moyer Group	Employ me!!!
+230	mSpot	Employ me!!!
+231	Myntra	Employ me!!!
+232	Myntra.com	Employ me!!!
+233	N/A	Employ me!!!
+234	National Informatics Centre	Employ me!!!
+235	National Instruments	Employ me!!!
+236	Ness	Employ me!!!
+237	NetApp	Employ me!!!
+238	Netflix	Employ me!!!
+239	Nexabion	Employ me!!!
+240	Nextag	Employ me!!!
+241	Nisum Technologies	Employ me!!!
+242	Nivio Technologies	Employ me!!!
+243	Nomura	Employ me!!!
+244	Nook	Employ me!!!
+245	Notfamous	Employ me!!!
+246	Novell	Employ me!!!
+247	NVIDIA	Employ me!!!
+248	omega	Employ me!!!
+249	One97	Employ me!!!
+250	OnMobile	Employ me!!!
+251	Oracle	Employ me!!!
+252	Overstock.com	Employ me!!!
+253	Palantir Technology	Employ me!!!
+254	PayPal	Employ me!!!
+255	Pega	Employ me!!!
+256	Persistent Systems	Employ me!!!
+257	Philips	Employ me!!!
+258	Pinterest	Employ me!!!
+259	PJ Pvt Ltd	Employ me!!!
+260	Pocketgems	Employ me!!!
+261	PRDS	Employ me!!!
+262	Progress	Employ me!!!
+263	Pubamatic	Employ me!!!
+264	Pubmatic	Employ me!!!
+265	QNX	Employ me!!!
+266	QSI HealthCare	Employ me!!!
+267	Qual Ex	Employ me!!!
+268	Qualcomm	Employ me!!!
+269	Rapleaf	Employ me!!!
+270	Raytheon	Employ me!!!
+271	Real Networks	Employ me!!!
+272	Rebellion Research	Employ me!!!
+273	RelQ Software Company Limited	Employ me!!!
+274	Research In Motion	Employ me!!!
+275	Ricoh 	Employ me!!!
+276	RightC	Employ me!!!
+277	Riverbed	Employ me!!!
+278	Roamware	Employ me!!!
+279	RoviCorp	Employ me!!!
+280	Roxar	Employ me!!!
+281	RSA	Employ me!!!
+282	Sabre Holdings	Employ me!!!
+283	Safenet	Employ me!!!
+284	Sage Software	Employ me!!!
+285	Salesforce	Employ me!!!
+286	Samsung	Employ me!!!
+287	Sap Labs	Employ me!!!
+288	Sapient Corporation	Employ me!!!
+289	SAS Research	Employ me!!!
+290	Schneider Electric	Employ me!!!
+291	Search Media	Employ me!!!
+292	Sears Holding	Employ me!!!
+293	Shutterfly	Employ me!!!
+294	Siemens	Employ me!!!
+295	SIG (Susquehanna International Group)	Employ me!!!
+296	SignPost	Employ me!!!
+297	Sileria Inc.	Employ me!!!
+298	Singapore Technologies	Employ me!!!
+299	Socialcam	Employ me!!!
+300	Softchoice	Employ me!!!
+301	Software AG	Employ me!!!
+302	Sonoa Systems	Employ me!!!
+303	Sophos	Employ me!!!
+304	Spotify	Employ me!!!
+305	SRMicro Info Systems	Employ me!!!
+306	Starbucks	Employ me!!!
+307	Starent Networks	Employ me!!!
+308	StartUp	Employ me!!!
+309	student	Employ me!!!
+310	SumoLogic	Employ me!!!
+311	SunGard 	Employ me!!!
+312	SWAPTON SOLUTIONS	Employ me!!!
+313	Symantec	Employ me!!!
+314	Symphony Services	Employ me!!!
+315	SynCfusion	Employ me!!!
+316	Synopsys R&D	Employ me!!!
+317	Take Two Interactive	Employ me!!!
+318	Tally Solutions	Employ me!!!
+319	TATA Consultancy Services	Employ me!!!
+320	Tech India Line	Employ me!!!
+321	Techlogix	Employ me!!!
+322	Tejas Networks	Employ me!!!
+323	Tellabs	Employ me!!!
+324	Texas Instruments	Employ me!!!
+325	The Digital Group	Employ me!!!
+326	The Royal Bank of Scotland Chennai	Employ me!!!
+327	thePlatform	Employ me!!!
+328	Thirdware Technologies	Employ me!!!
+329	Thomson Reuters	Employ me!!!
+330	ThoughtWorks	Employ me!!!
+331	Toppr	Employ me!!!
+332	TP	Employ me!!!
+333	TRG	Employ me!!!
+334	Tribal Fusion	Employ me!!!
+335	Tricon	Employ me!!!
+336	Trilogy	Employ me!!!
+337	Turing Software	Employ me!!!
+338	Twitter	Employ me!!!
+339	Two Sigma	Employ me!!!
+340	United HealthGroup	Employ me!!!
+341	unknown	Employ me!!!
+342	Urban Touch	Employ me!!!
+343	US	Employ me!!!
+344	USAA	Employ me!!!
+345	USInternetworking	Employ me!!!
+346	UST global	Employ me!!!
+347	VANS	Employ me!!!
+348	Vanu	Employ me!!!
+349	Vdopia	Employ me!!!
+350	Video Gaming Technologies	Employ me!!!
+351	Vistaprint	Employ me!!!
+352	Vizury	Employ me!!!
+353	VMWare Inc	Employ me!!!
+354	Walmart Labs	Employ me!!!
+355	Watchguard	Employ me!!!
+356	Wichorus	Employ me!!!
+357	Wipro Technologies	Employ me!!!
+358	Wireless Generation	Employ me!!!
+359	WorksApp	Employ me!!!
+360	Xurmo	Employ me!!!
+361	Yahoo	Employ me!!!
+362	Yatra.com	Employ me!!!
+363	Yelp	Employ me!!!
+364	Zillow	Employ me!!!
+365	Zoosk	Employ me!!!
+366	ZS Associates	Employ me!!!
+367	Zycus	Employ me!!!
+368	Zynga	Employ me!!!
