@@ -15,12 +15,13 @@ $statement=$link->prepare("INSERT INTO users (username,password,first_name,last_
 
 //bind
 $init=0;
-$statement->bind_param("ssssssiss",$_POST['username'],$_POST['password'],$_POST['first_name'],$_POST['last_name'],$_POST['school'],$_POST['major'],$init,$_POST['graduation'],$today);
+$password=hash('sha512',$_POST['password']);
+$statement->bind_param("ssssssiss",$_POST['username'],$password,$_POST['first_name'],$_POST['last_name'],$_POST['school'],$_POST['major'],$init,$_POST['graduation'],$today);
 
 //execute
 $statement->execute() or die("Username already exists");
 
-header("Location: ../index.php");
+//header("Location: ../index.php");
 die();
 
 //close
