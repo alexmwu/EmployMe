@@ -42,10 +42,10 @@
             <div class="main grey">
                 <div class="main wrapper clearfix">
                     <article>
-                        <h1>Interview Questions</h1>
+                        <h1>"This site rocks!" - Mark Zuckerberg</h1>
                     </article>
                     <aside>
-                        saasdfasfasdf
+                        iOS version is coming soon ...
                     </aside>
                 </div>
             </div> <!-- #main -->
@@ -67,14 +67,8 @@
         <script>
   var fill = d3.scale.category20();
   d3.layout.cloud().size([300, 300])
-      .words([
-        {"text":"Google", "url":"http://google.com/"},
-             {"text":"Facebook", "url":"http://facebook.com/"},
-             {"text":"Microsoft", "url":"http://microsoft.com/"},
-             {"text":"Apple", "url":"http://apple.com/"},
-             {"text":"Amazon", "url":"http://amazon.com"}
-        ].map(function(d) {
-        return {text: d.text, size: 10 + Math.random() * 90};
+      .words(topics = [ 'Algorithm' , 'Android' , 'Application / UI Design' , 'Arrays' , 'Assembly' , 'Automata' , 'Behavioral' , 'Bit Manipulation' , 'Brain Teasers' , 'C' , 'C' , 'C++' , 'Cache' , 'Coding' , 'Compiler' , 'Computer Architecture & Low Level' , 'computer network' , 'Data Mining' , 'Data Structures' , 'Database' , 'Debugging' , 'Distributed Computing' , 'Dynamic Programming' , 'Experience' , 'Front End Web Development' , 'General Questions and Comments' , 'Graphics' , 'Hash Table' , 'Ideas' , 'Java' , 'JavaScript' , 'Knowledge Based' , 'Large Scale Computing' , 'Linked Lists' , 'Linux Kernel' , 'Math & Computation' , 'Matlab' , 'Matrix' , 'Network' , 'Networking / Web / Internet' , 'Object Oriented Design' , 'Online Test' , 'Operating System' , 'Operators' , 'Perl' , 'PHP' , 'Probability' , 'Problem Solving' , 'Puzzle' , 'Python' , 'Questions YOU should ask!' , 'Replacing multiple string occurences from a text' , 'Sales' , 'Security' , 'Sets' , 'Sorting' , 'SQL' , 'Stacks' , 'String Manipulation' , 'System Administration' , 'System Design' , 'technical' , 'Terminology & Trivia' , 'test' , 'Testing' , 'Threads' , 'Trees and Graphs' , 'Unix' , 'unix system programmin' , 'unix system programming' , 'XML' ].map(function(d) {
+        return {text: d, size: 10 + Math.random() * 80};
       }))
       .padding(5)
       .rotate(function() { return ~~(Math.random() * 2) * 90; })
@@ -84,10 +78,10 @@
       .start();
   function draw(words) {
     d3.select("body").append("svg")
-        .attr("width", 300)
-        .attr("height", 300)
+        .attr("width", 1000)
+        .attr("height", 1000)
       .append("g")
-        .attr("transform", "translate(150,150)")
+        .attr("transform", "translate(300,300)")
       .selectAll("text")
         .data(words)
       .enter().append("text")
@@ -100,7 +94,7 @@
         })
         .text(function(d) { return d.text; })
         .on("click", function (d, i) {
-            window.open(d.url, "_blank");
+            window.open("http://www.google.com");
         });
   }
 </script>
