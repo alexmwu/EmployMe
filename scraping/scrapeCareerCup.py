@@ -80,7 +80,7 @@ for page in xrange(40):
 		answers = bdriver.find_elements_by_xpath("//div[@class='uncollapsedComment']//div[@class='commentBody']/p")
 		for ans in answers:
 			acount += 1
-			af.write(str(acount) + '\t' + users[random.randint(0, len(users) - 1)] + '\t' + str(curr_qs.index(q) + 1) + '\t' + deunicode(ans.text) + '\t' + time.strftime('%Y-%m-%d %H:%M:%S') + '\t\t\n') 
+			af.write(str(acount) + '\t' + users[random.randint(0, len(users) - 1)] + '\t' + str(page * 30 + curr_qs.index(q) + 1) + '\t' + deunicode(ans.text) + '\t' + time.strftime('%Y-%m-%d %H:%M:%S') + '\t\t\n') 
 
 driver.close()
 qf.close()
