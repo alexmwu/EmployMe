@@ -9,7 +9,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql','awu3') or die("Problem
 
 //query
 $username=$_POST['username'];
-$password=$_POST['password'];
+$password=hash('sha512',$_POST['password']);
 $pw="";
 
 $query = $link->prepare("SELECT password FROM users where username = ? LIMIT 1");
