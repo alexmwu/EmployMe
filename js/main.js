@@ -40,3 +40,21 @@ function userEditPost(post_type,page_id){
 
 
 }
+
+function search(form){
+
+	var content=form.searchBox.value;
+  	$.ajax({
+	      url: '../questions/search.php',
+	      type: 'post',
+	      data: 'content='+content,
+	      success: function(output) 
+	      {
+	          alert('success, server says '+output);
+
+	      }, error: function()
+	      {
+	          alert('something went wrong, post failed');
+	      }
+    });
+}
