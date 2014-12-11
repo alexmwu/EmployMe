@@ -57,7 +57,7 @@ session_start()
 			<form action="companies/add_company.php"><input type="submit" value="Add Company"></form>
 			<form action="questions/show_questions.php"><input type="submit" value="All Questions"></form>
 			<form action="questions/questions.php"><input type="submit" value="Catalog"></form>
-			<form action="questions/search.php" method="post"><input type="textbox" name="content" placeholder="Search"><input type="submit" value="Search"></form>
+			<form><input type="textbox" name="searchBox" placeholder="Search"><input type="button" value="Search" onclick="search(this.form)"></form>
 		</div>
 		
 		<!-- some of the best example questions-->
@@ -74,9 +74,12 @@ session_start()
 
 		<!--foother here-->
 
+<<<<<<< HEAD
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <script src="../js/main.js"></script>
+=======
+>>>>>>> 42237431766aaed682c32ec3cf765a5ad9daf52f
 	</body>
 </html>
