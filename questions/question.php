@@ -4,16 +4,31 @@ session_start();
 $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Problem connecting to database.");
 
 //query for all questions
-$question_query = "select * from questions where question_id=".intval($_GET['id']).";";
-$questions = $link->query($question_query) or die ('Question Query Failed');
+//$question_query = "select * from questions where question_id=".intval($_GET['id']).";";
+$question_id=intval($_GET['id']);
+$questions = $link->prepare("SELECT * from questions where question_id=?");
+$questions->bind_param('i',$question_id);
+$questions->execute();
+$question = $questions->get_result();
 
-$comment_query = "select * from comments where question_id=".intval($_GET['id']).";";
-$comments = $link->query($comment_query) or die ('Comment Query Failed');
+//$comment_query = "select * from comments where question_id=".intval($_GET['id']).";";
+//$comments = $link->query($comment_query) or die ('Comment Query Failed');
+/*
+$comments = $link->prepare("SELECT * from comments where question_id=?");
+$comments->bind_param('i',$question_id);
+$comments->execute();
+$comment = $comments->get_result();
+*/
 
-$answer_query = "select * from answers where question_id=".intval($_GET['id']).";";
-$answers = $link->query($answer_query) or die ('Answer Query Failed');
+//$answer_query = "select * from answers where question_id=".intval($_GET['id']).";";
+//$answers = $link->query($answer_query) or die ('Answer Query Failed');
 
-$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
+$answers_query = $link->prepare("SELECT * from answers where question_id=?");
+$answers_query->bind_param('i',$question_id);
+$answers_query->execute();
+$answers = $answers_query->get_result();
+
+//$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
 ?>
 
 </head>
@@ -52,10 +67,13 @@ $tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
         <![endif]-->
 
 <?php
-echo '<div id="question">';
+while ($tuple = $question->fetch_assoc()) {
+    // do something with $row
+	echo '<div id="question">';
 	echo '<div>';
 	echo '<p>';
-	echo $tuple['title'].'<br>';
+	if($tuple['title']!=null) echo $tuple['title'].'<br>';
+	else echo 'No Title'.'<br>';
 	echo "Asked by: ".$tuple['username'].'<br>';
 	echo '<div id="questionContent">';
 	echo $tuple['content'];
@@ -64,6 +82,7 @@ echo '<div id="question">';
 	echo $tuple['modified'].'<br>';
 	echo '</p>'; 
 	echo '</div>';
+}
 
 if(isset($_SESSION['user'])){
 	?>
@@ -105,7 +124,7 @@ if(isset($_SESSION['user'])){
 */
 
 echo '<div>';
-while($answer = mysqli_fetch_array($answers, MYSQL_ASSOC)){
+while($answer = $answers->fetch_assoc()) {
 	if($answer){
 		echo '<div>';
 		echo '<p>';
@@ -160,7 +179,7 @@ if(isset($_SESSION['user'])){
 <?php
 	}
 
-mysqli_free_result($questions);
+
 
 mysqli_close($link);
 
