@@ -10,19 +10,10 @@ session_start()
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Alex Wu , Ethan Chen">
-		<meta name="description" content="Template.">
-		<title><?php 
-		if($tuple['title']!=NULL){
-			echo $tuple['title'];
-		}
-		else{
-			echo $tuple['content'];
-		}
-		?></title>
+		<meta name="description" content="Prepare for technical interviews.">
+		<title>For all your interviewing needs.</title>
 
         <link rel="stylesheet" href="../css/normalize.min.css">
         <link rel="stylesheet" href="../css/main.css">
@@ -35,22 +26,36 @@ session_start()
 	    <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-		<?php
-			if(isset($_SESSION["user"])){
-				//echo "Welcome " . $_COOKIE["user"] . "!\n";
 
-				echo "Welcome ".$_SESSION["user"]."!\n";
-				echo "\n";
-				echo '<form action="users/log_out.php"><input type="submit" value="Log Out"></form>';
-				echo '<form action="users/edit_user.php"><input type="submit" value="Edit Account"></form>';
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <a href="index.html"><h1 class="title">EmployMe</h1></a>
+                <nav>
+                    <ul>
+                        <li><a href="questions/questions.php">questions</a></li>
+                        		<?php
+								if(isset($_SESSION["user"])){
+									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 
-			}
-			else{
-				echo '
-		<form action="users/sign_in.php"><input type="submit" value="Sign In"></form>
-		<form action="users/sign_up.php"><input type="submit" value="Sign Up"></form>';
-			}
-?>
+									echo "Welcome ".$_SESSION["user"]."!\n";
+									echo "\n";
+									echo '<form action="users/log_out.php"><input type="submit" value="Log Out"></form>';
+									echo '<form action="users/edit_user.php"><input type="submit" value="Edit Account"></form>';
+
+								}
+								else{
+									?>
+									<li><a href="users/sign_in.php">sign in</a></li>
+					                <li><a href="users/sign_up.php">sign up</a></li>
+					                <?php
+								}
+					?>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+
 		<!-- banner for the site-->
 		<div class="section" id="banner">
 			<form action="questions/post_question.php"><input type="submit" value="Post Question"></form>
