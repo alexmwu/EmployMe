@@ -3,7 +3,6 @@
 session_start();
 
 $user=$_GET['user'];
-var_dump($user);
 if($user=$_SESSION['user']){
 	$sameuser=1;
 }
@@ -14,22 +13,22 @@ if(!isset($sameuser)){
 $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Problem connecting to database.");
 
 
-$users = $link->prepare("SELECT * from users where username=?");
+$users = $link->prepare("SELECT * from users where username=?;");
 $users->bind_param('s',$user);
 $users->execute();
 $user = $users->get_result();
-/*
-$questions = $link->prepare("SELECT * from questions where username=?");
+
+$questions = $link->prepare("SELECT * from questions where username=?;");
 $questions->bind_param('s',$user);
 $questions->execute();
 $question = $questions->get_result();
 
 
-$answers_query = $link->prepare("SELECT * from answers where username=?");
-$answers_query->bind_param('s',$user);
+$answers_query = $link->prepare("SELECT * from answers where username=?;");
+$answers_query->bind_param('i',$hi);
 $answers_query->execute();
 $answers = $answers_query->get_result();
-*/
+
 
 //$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
 ?>
@@ -116,7 +115,6 @@ while ($tuple = $question->fetch_assoc()) {
 
 
 
-/*
 
 echo '<div>';
 while($answer = $answers->fetch_assoc()) {
@@ -134,7 +132,7 @@ while($answer = $answers->fetch_assoc()) {
 
 }
 echo '</div>';
-*/
+
 
 
 mysqli_close($link);

@@ -200,7 +200,10 @@ nav a:hover {
   text-decoration: none;
 }
 
-
+nav a:hover{
+    text-decoration: none;
+    background:#7851a9;
+}
 
 
 

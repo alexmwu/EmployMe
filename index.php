@@ -32,16 +32,23 @@ session_start()
                 <a href="index.html"><h1 class="title">EmployMe</h1></a>
                 <nav>
                     <ul>
+                        <li><ul>
                         <li><a href="questions/questions.php">questions</a></li>
+                        <li><a href="questions/post_question.php">post a question</a></li>
+                        </ul></li>
                         		<?php
 								if(isset($_SESSION["user"])){
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
+									?>
 
-									echo "Welcome ".$_SESSION["user"]."!\n";
+									<li><a href="<?php echo "users/user.php?user=".$_SESSION['user']; ?>">your account</a></li>
+					                <li><a href="users/log_out.php">sign out</a></li>
+					                <?php
+									/*echo "Welcome ".$_SESSION["user"]."!\n";
 									echo "\n";
 									echo '<form action="users/log_out.php"><input type="submit" value="Log Out"></form>';
 									echo '<form action="users/edit_user.php"><input type="submit" value="Edit Account"></form>';
-
+									*/
 								}
 								else{
 									?>
@@ -65,19 +72,38 @@ session_start()
 			<form action="questions/search.php" method="post"><input type="textbox" name="content" placeholder="Search"><input type="submit" value="Search"></form>
 		</div>
 		
-		<!-- some of the best example questions-->
-		<div class="section" id="featured">
-
-
-		</div>
-	
-		<!--a blurb on EmployMe-->	
-		<div class="section" id="about">
-
-	
-		</div>
+		<div class="main-container">
+            <div class="main">
+                <img class="center cover" src="img/bad_interview_questions.jpg">
+                <a href="questions/questions.php"><button class="btn center"> challenge me! </button></a>
+            </div>
+            <div class="main grey">
+                <div class="main wrapper clearfix">
+                    <article>
+                        <h1>"This site rocks!" - Mark Zuckerberg</h1>
+                    </article>
+                    <aside>
+                        iOS version is coming soon ...
+                    </aside>
+                </div>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
 
 		<!--foother here-->
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>EmployMe</h3>
+                <p>
+                About Us
+                <br>
+                Contact Us
+                <br>
+                © 2014 EmployMe
+                </p>
+            </footer>
+        </div>
+
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
