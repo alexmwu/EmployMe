@@ -205,7 +205,13 @@ nav a:hover{
     background:#7851a9;
 }
 
+nav ul ul {
+    display: none;
+}
 
+nav ul li:hover > ul {
+    display: block;
+}
 
 
 

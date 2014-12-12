@@ -29,14 +29,10 @@ session_start()
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <a href="index.html"><h1 class="title">EmployMe</h1></a>
+                <a href="index.php"><h1 class="title">EmployMe</h1></a>
                 <nav>
                     <ul>
-                        <li><ul>
-                        <li><a href="questions/questions.php">questions</a></li>
-                        <li><a href="questions/post_question.php">post a question</a></li>
-                        </ul></li>
-                        		<?php
+                        <li><a href="questions/questions.php">questions</a></li>                        		<?php
 								if(isset($_SESSION["user"])){
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 									?>
@@ -64,13 +60,7 @@ session_start()
 
 
 		<!-- banner for the site-->
-		<div class="section" id="banner">
-			<form action="questions/post_question.php"><input type="submit" value="Post Question"></form>
-			<form action="companies/add_company.php"><input type="submit" value="Add Company"></form>
-			<form action="questions/show_questions.php"><input type="submit" value="All Questions"></form>
-			<form action="questions/questions.php"><input type="submit" value="Catalog"></form>
-			<form action="questions/search.php" method="post"><input type="textbox" name="content" placeholder="Search"><input type="submit" value="Search"></form>
-		</div>
+		
 		
 		<div class="main-container">
             <div class="main">
