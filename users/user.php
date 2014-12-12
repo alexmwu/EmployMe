@@ -3,6 +3,7 @@
 session_start();
 
 $user=$_GET['user'];
+var_dump($user);
 if($user=$_SESSION['user']){
 	$sameuser=1;
 }
@@ -17,10 +18,10 @@ $users = $link->prepare("SELECT * from users where username=?");
 $users->bind_param('s',$user);
 $users->execute();
 $user = $users->get_result();
-
+/*
 $questions = $link->prepare("SELECT * from questions where username=?");
 $questions->bind_param('s',$user);
-//$questions->execute();
+$questions->execute();
 $question = $questions->get_result();
 
 
@@ -28,7 +29,7 @@ $answers_query = $link->prepare("SELECT * from answers where username=?");
 $answers_query->bind_param('s',$user);
 $answers_query->execute();
 $answers = $answers_query->get_result();
-
+*/
 
 //$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
 ?>
@@ -74,10 +75,22 @@ if(isset($sameuser)){
 	<?php
 }
 
+while($tuple=$user->fetch_assoc()){
+	echo '<div id="user">';
+	echo '<p>';
+	if($tuple['active']!=1) echo 'This user account has been deactivated.'.'<br>';
+	echo $tuple['first_name'].' '.$tuple['last_name'].'<br>';
+	echo 'School: '.$tuple['school'].'<br>';
+	echo 'Major: '.$tuple['major'].'<br>';
+	echo 'Graduation: '.$tuple['graduation_time'].'<br>';
+	echo '</p>';
+	echo '</div>';
+}
+
 
 while ($tuple = $question->fetch_assoc()) {
     // do something with $row
-	echo '<div id="question">';
+	echo '<div class="question">';
 	echo '<div>';
 	echo '<p>';
 	if($tuple['title']!=null) echo $tuple['title'].'<br>';
@@ -89,20 +102,21 @@ while ($tuple = $question->fetch_assoc()) {
 //	echo $tuple['votes'].'<br>';
 	echo $tuple['modified'].'<br>';
 	echo '</p>'; 
+
+	if(isset($sameuser)){
+		?>
+			<form id="editQuestion">
+				<button onClick="<?php echo "userEditPost(0,".$tuple['question_id'].")";?> ">
+				Edit Question</button>
+			</form>
+		<?php
+	}
 	echo '</div>';
 }
 
 
-if(isset($sameuser)){
-	?>
-		<form id="editQuestion">
-			<button onClick="<?php echo "userEditPost(0,".$_GET['id'].")";?> ">
-			Edit Question</button>
-		</form>
-	<?php
-}
 
-
+/*
 
 echo '<div>';
 while($answer = $answers->fetch_assoc()) {
@@ -120,7 +134,7 @@ while($answer = $answers->fetch_assoc()) {
 
 }
 echo '</div>';
-
+*/
 
 
 mysqli_close($link);
