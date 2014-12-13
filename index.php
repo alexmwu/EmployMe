@@ -15,8 +15,8 @@ session_start()
 		<meta name="description" content="Prepare for technical interviews.">
 		<title>For all your interviewing needs.</title>
 
-        <link rel="stylesheet" href="../css/normalize.min.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
         <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
@@ -72,24 +72,19 @@ session_start()
                     <article>
                         <h1>"This site rocks!" - Mark Zuckerberg</h1>
                     </article>
-                    <aside>
-                        iOS version is coming soon ...
-                    </aside>
                 </div>
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
-		<!--foother here-->
+        <!--foother here-->
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>EmployMe</h3>
-                <p>
-                About Us
-                <br>
-                Contact Us
-                <br>
-                © 2014 EmployMe
-                </p>
+                <ul>
+                    <li><a href="#"><strong>EmployMe</strong></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>© 2014 EmployMe</li>
+                </ul>
             </footer>
         </div>
 
@@ -99,5 +94,6 @@ session_start()
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <script src="../js/main.js"></script>
-	</body>
+    </body>
 </html>
+
