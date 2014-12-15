@@ -56,13 +56,13 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
         </div>
 
 	<div class="button-nav">
-	    <a href="../companies/companies.php">
+	    <a href="#">
 		<button class="btn ">Companies</button>
 	    </a>
 	    <a href="../topics/topics.php">
 		<button class="btn ">Topics</button>
 	    </a>
-	    <a href="#">
+	    <a href="../questions/questions.php">
 		<button class="btn ">Questions</button>
 	    </a>
 	</div>
@@ -75,7 +75,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 <?php
 //query for all companies
 //no need to protect from SQL injections but will add just in case
-/*
+
 $companies_query = $link->prepare("SELECT * from companies");
 $companies_query->execute();
 $companies = $companies_query->get_result();
@@ -98,7 +98,7 @@ while ($tuple = $companies->fetch_assoc()) {
 echo '</div>';
 
 //query for all topics
-
+/*
 $topics_query = $link->prepare("SELECT * from topics");
 $topics_query->execute();
 $topics = $topics_query->get_result();
@@ -118,7 +118,7 @@ while ($tuple = $topics->fetch_assoc()) {
 	echo '</a>';
 }
 echo '</div>';
-*/
+
 //query for all questions
 
 $questions_query = $link->prepare("SELECT * from questions");
@@ -133,7 +133,7 @@ while ($tuple = $questions->fetch_assoc()) {
 	echo '<a href="question.php?id='.$tuple['question_id'].'">';
 	echo '<div>';
 	echo '<p>';
-	if(isset($tuple['title']) && $tuple['title']!=null) echo $tuple['title'].'<br>';
+	if($tuple['title']!=null) echo $tuple['title'].'<br>';
 	else echo 'No Title'.'<br>';
 	echo $tuple['username'].'<br>';
 	echo $tuple['content'].'<br>';
@@ -144,8 +144,8 @@ while ($tuple = $questions->fetch_assoc()) {
 	echo '</a>';
 }
 echo '</div>';
-
-mysqli_free_result($questions);
+*/
+mysqli_free_result($companies);
 
 mysqli_close($link);
 

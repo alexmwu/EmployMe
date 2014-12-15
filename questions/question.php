@@ -128,7 +128,8 @@ while($answer = $answers->fetch_assoc()) {
 	if($answer){
 		echo '<div>';
 		echo '<p>';
-		echo $answer['title'].'<br>';
+		if(isset($answer['title']) && $answer['title']!=null) echo $answer['title'].'<br>';
+	        else echo 'No Title'.'<br>';
 		echo "Answered by: ".$answer['username'].'<br>';
 		echo $answer['content'].'<br>';
 	//	echo $answer['votes'].'<br>';

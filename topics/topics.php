@@ -59,10 +59,10 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 	    <a href="../companies/companies.php">
 		<button class="btn ">Companies</button>
 	    </a>
-	    <a href="../topics/topics.php">
+	    <a href="#">
 		<button class="btn ">Topics</button>
 	    </a>
-	    <a href="#">
+	    <a href="../questions/questions.php">
 		<button class="btn ">Questions</button>
 	    </a>
 	</div>
@@ -96,7 +96,7 @@ while ($tuple = $companies->fetch_assoc()) {
 }
 
 echo '</div>';
-
+*/
 //query for all topics
 
 $topics_query = $link->prepare("SELECT * from topics");
@@ -118,9 +118,9 @@ while ($tuple = $topics->fetch_assoc()) {
 	echo '</a>';
 }
 echo '</div>';
-*/
-//query for all questions
 
+//query for all questions
+/*
 $questions_query = $link->prepare("SELECT * from questions");
 $questions_query->execute();
 $questions = $questions_query->get_result();
@@ -133,7 +133,7 @@ while ($tuple = $questions->fetch_assoc()) {
 	echo '<a href="question.php?id='.$tuple['question_id'].'">';
 	echo '<div>';
 	echo '<p>';
-	if(isset($tuple['title']) && $tuple['title']!=null) echo $tuple['title'].'<br>';
+	if($tuple['title']!=null) echo $tuple['title'].'<br>';
 	else echo 'No Title'.'<br>';
 	echo $tuple['username'].'<br>';
 	echo $tuple['content'].'<br>';
@@ -144,8 +144,8 @@ while ($tuple = $questions->fetch_assoc()) {
 	echo '</a>';
 }
 echo '</div>';
-
-mysqli_free_result($questions);
+*/
+mysqli_free_result($topics);
 
 mysqli_close($link);
 

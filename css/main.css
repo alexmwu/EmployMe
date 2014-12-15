@@ -201,6 +201,14 @@ nav a:hover {
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
+
 nav a:hover{
     text-decoration: none;
     background:#7851a9;
@@ -253,6 +261,12 @@ div a div{
 }
 
 .questions {
+}
+
+.button-nav{
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* ==========================================================================
