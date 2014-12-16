@@ -7,7 +7,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 //query
 $post_type = mysqli_real_escape_string($link,htmlentities($_POST['post_type']));
 $page_id = mysqli_real_escape_string($link,htmlentities($_POST['page_id']));
-$content = mysqli_real_escape_string($link,htmlentities($_POST['content']));
+$content = stripslashes(mysqli_real_escape_string($link,htmlentities($_POST['content'])));
 
 
 

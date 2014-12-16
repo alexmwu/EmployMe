@@ -211,7 +211,7 @@ a{
 
 nav a:hover{
     text-decoration: none;
-    background:#7851a9;
+    background: #7851a9;
 }
 
 nav ul ul {
@@ -248,6 +248,10 @@ div a div{
     text-decoration: none;
 }
 
+h1{
+	text-align: center;
+	margin-top: 1em;
+}
 
 #container .column {
     position: relative;
@@ -275,7 +279,7 @@ div a div{
 }
 
 .question{
-	text-align: center;
+	text-align: left;
 	border-top: 1px solid black;
 	margin-top: 2em;
 	margin-bottom: 2em;
@@ -283,6 +287,19 @@ div a div{
 	margin-right: 200px;
 }
 
+.question:hover{
+	color: #7851a9;
+	font-weight: bold;
+}
+
+.edits{
+	text-align: center;
+}
+
+textarea{
+	width: 60em;
+	height: 10em;
+}
 
 /* ==========================================================================
    Media Queries

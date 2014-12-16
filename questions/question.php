@@ -6,7 +6,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 //query for all questions
 //$question_query = "select * from questions where question_id=".intval($_GET['id']).";";
 $question_id=intval($_GET['id']);
-$questions = $link->prepare("SELECT * from questions where question_id=?");
+$questions = $link->prepare("SELECT username,title,content,companies.name as company_name,topics.name as topic_name,companies.company_id as company_id,topics.topic_id as topic_id from (select username,title,content,company_id,topic_id from questions where question_id=?) question, companies, topics where question.company_id = companies.company_id and question.topic_id=topics.topic_id");
 $questions->bind_param('i',$question_id);
 $questions->execute();
 $question = $questions->get_result();
@@ -31,7 +31,6 @@ $answers = $answers_query->get_result();
 //$tuple = mysqli_fetch_array($questions, MYSQL_ASSOC);
 ?>
 
-</head>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -40,12 +39,12 @@ $answers = $answers_query->get_result();
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Alex Wu , Ethan Chen">
-		<meta name="description" content="Template.">
-		<title><?php 
+	<meta name="description" content="Prepare for technical interviews.">
+		<title>	<?php 
+		$tuple = $question->fetch_assoc();
 		if($tuple['title']!=NULL){
 			echo $tuple['title'];
 		}
@@ -70,7 +69,7 @@ $answers = $answers_query->get_result();
                 <a href="../index.php"><h1 class="title">EmployMe</h1></a>
                 <nav>
                     <ul>
-                        <li><a href="../post/user_post.php">post</a></li>                                       <?php
+                        <li><a href="questions.php">all</a></li>                                       <?php
                                                                 if(isset($_SESSION["user"])){
                                                                         //echo "Welcome " . $_COOKIE["user"] . "!\n";
                                                                         ?>
@@ -92,32 +91,60 @@ $answers = $answers_query->get_result();
         </div>
 
 <?php
-while ($tuple = $question->fetch_assoc()) {
-    // do something with $row
-	echo '<div id="question">';
-	echo '<div>';
-	echo '<p>';
+	echo '<h1>';
 	if($tuple['title']!=null) echo $tuple['title'].'<br>';
 	else echo 'No Title'.'<br>';
-	echo "Asked by: ".$tuple['username'].'<br>';
+	echo '</h1>';
+//while ($tuple = $question->fetch_assoc()) {
+    // do something with $row
+	echo '<div>';
+	echo '<div class="question">';
+	echo '<p>';
 	echo '<div id="questionContent">';
 	echo $tuple['content'];
 	echo '</div>';
-//	echo $tuple['votes'].'<br>';
-	echo $tuple['modified'].'<br>';
+	echo '<br>';
 	echo '</p>'; 
-	echo '</div>';
-}
-
+	echo "<h3>Asked by: ".$tuple['username'].'</h3><br>';
+//	echo $tuple['votes'].'<br>';
+//}
+echo '<div class="edits">';
 if(isset($_SESSION['user'])){
 	?>
-		<form id="editQuestion">
+		<form id="editQuestion edit">
 			<button onClick="<?php echo "userEditPost(0,".$_GET['id'].")";?> ">
 			Edit Question</button>
 		</form>
 	<?php
 }
 
+if(isset($_SESSION['user'])){
+        ?>
+<br>
+<h2>Answer the Question</h2>
+<textarea form="answer" name="editAnswer"> </textarea>
+<br>
+<br>
+<form class="edit" id="answer">
+        <input type="button" value="Add Answer" onclick="<?php echo "post(1,".$_GET['id'].",this.form)";?> ">
+</form>
+
+
+<?php
+        }
+?>
+        <div class="button-nav">
+            <a href="questions.php?category=company&id=<?php echo $tuple['company_id'];?>">
+                <button class="btn "><?php echo $tuple['company_name'];?></button>
+            </a>
+            <a href="questions.php?category=topic&id=<?php echo $tuple['topic_id'];?>">
+                <button class="btn "><?php echo $tuple['topic_name'];?></button>
+            </a>
+        </div>
+<?php	
+	echo '</div>';
+
+	echo '</div>';
 /*
 $answercomments=array();
 while($tuple = mysqli_fetch_array($comments, MYSQL_ASSOC)){
@@ -151,7 +178,7 @@ if(isset($_SESSION['user'])){
 echo '<div>';
 while($answer = $answers->fetch_assoc()) {
 	if($answer){
-		echo '<div tuple="question>';
+		echo '<div class="question">';
 		echo '<p>';
 		echo "Answered by: ".$answer['username'].'<br>';
 		echo $answer['content'].'<br>';
@@ -193,20 +220,21 @@ echo '</div>';
 //<input type="textbox" name="editQuestionContent" placeholder="'+questionContent+'">
 //<input type="button" value="Edit Question" onClick="post(0,'+page_id+',this.form)">'
 
-if(isset($_SESSION['user'])){
-	?>
-<form>
-	<input type="textbox" name="editAnswer" placeholder="Answer the Question">
-	<input type="button" value="Add Answer" onclick="<?php echo "post(1,".$_GET['id'].",this.form)";?> ">
-</form>
-<?php
-	}
-
 
 
 mysqli_close($link);
 
 ?>
+        <div class="footer-container">
+            <footer class="wrapper">
+                <ul>
+                    <li><a href="#"><strong>EmployMe</strong></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>© 2014 EmployMe</li>
+                </ul>
+            </footer>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>

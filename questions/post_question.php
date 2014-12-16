@@ -18,7 +18,7 @@
 		<!--suggestions for company and tag-->
 		Company: <input type="textbox" name="company">
 		<br>
-		Other tags: <input type="textbox" name="company">
+		Topic: <input type="textbox" name="company">
 		<br>
 		<input type="submit">
 		</form>

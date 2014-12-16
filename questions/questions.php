@@ -29,7 +29,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
                 <a href="../index.php"><h1 class="title">EmployMe</h1></a>
                 <nav>
                     <ul>
-                        <li><a href="../post/user_post.php">post</a></li>                        		<?php
+                        <li><a href="post_question.php">post</a></li>                        		<?php
 								if(isset($_SESSION["user"])){
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 									?>
@@ -120,6 +120,9 @@ while ($tuple = $topics->fetch_assoc()) {
 echo '</div>';
 */
 //query for all questions
+
+if(isset($_GET['category']))
+
 
 $questions_query = $link->prepare("SELECT * from questions");
 $questions_query->execute();
