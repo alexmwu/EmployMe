@@ -21,7 +21,7 @@ $statement->bind_param("ssssssiss",$_POST['username'],$password,$_POST['first_na
 //execute
 $statement->execute() or die("Username already exists");
 
-//header("Location: ../index.php");
+header("Location: ../index.php");
 die();
 
 //close

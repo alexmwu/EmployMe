@@ -253,21 +253,36 @@ div a div{
     position: relative;
 }
 
-.companies {
-}
-
-.topics {
-
-}
-
-.questions {
-}
-
 .button-nav{
+	margin-top: 2em;
 	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.topic{
+	margin-top: .5em;
+	display: inline-block;
+}
+
+.topic p{
+	text-align: center;
+}
+
+.column{
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.question{
+	text-align: center;
+	border-top: 1px solid black;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
 
 /* ==========================================================================
    Media Queries

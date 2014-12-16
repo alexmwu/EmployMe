@@ -65,6 +65,31 @@ $answers = $answers_query->get_result();
 	    <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+<div class="header-container">
+            <header class="wrapper clearfix">
+                <a href="../index.php"><h1 class="title">EmployMe</h1></a>
+                <nav>
+                    <ul>
+                        <li><a href="../post/user_post.php">post</a></li>                                       <?php
+                                                                if(isset($_SESSION["user"])){
+                                                                        //echo "Welcome " . $_COOKIE["user"] . "!\n";
+                                                                        ?>
+
+                                                                        <li><a href="../users/edit_user.php">edit account</a></li>
+                                                        <li><a href="../users/log_out.php">sign out</a></li>
+				<?php
+                                                                }
+                                                                else{
+                                                                        ?>
+                                                                        <li><a href="../users/sign_in.php">sign in</a></li>
+                                                        <li><a href="../users/sign_up.php">sign up</a></li>
+                                                        <?php
+                                                                }
+                                        ?>
+                    </ul>
+                </nav>
+            </header>
+        </div>
 
 <?php
 while ($tuple = $question->fetch_assoc()) {
@@ -126,14 +151,11 @@ if(isset($_SESSION['user'])){
 echo '<div>';
 while($answer = $answers->fetch_assoc()) {
 	if($answer){
-		echo '<div>';
+		echo '<div tuple="question>';
 		echo '<p>';
-		if(isset($answer['title']) && $answer['title']!=null) echo $answer['title'].'<br>';
-	        else echo 'No Title'.'<br>';
 		echo "Answered by: ".$answer['username'].'<br>';
 		echo $answer['content'].'<br>';
 	//	echo $answer['votes'].'<br>';
-		echo $answer['modified'].'<br>';
 		echo '</p>'; 
 		echo '</div>';
 	}

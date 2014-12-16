@@ -34,8 +34,8 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 									?>
 
-									<li><a href="<?php echo "../users/user.php?user=".$_SESSION['user']; ?>">your account</a></li>
-					                <li><a href="../users/log_out.php">sign out</a></li>
+					                <li><a href="../users/edit_user.php">edit account</a></li>
+							<li><a href="../users/log_out.php">sign out</a></li>
 					                <?php
 									/*echo "Welcome ".$_SESSION["user"]."!\n";
 									echo "\n";
@@ -83,16 +83,13 @@ $companies = $companies_query->get_result();
 //$company_query = "select * from companies;";
 //$companies = $link->query($company_query) or die('Company Query Failed');
 
-echo '<div>';	//div for left aligned block
+echo '<div class="column">';	//div for left aligned block
 while ($tuple = $companies->fetch_assoc()) {
+	echo '<div class="topic">';
 	echo '<a href="../companies/company.php?id='.$tuple['company_id'].'">';
-	echo '<div>';
-	echo '<p>';
 	echo $tuple['name'].'<br>';
-//	echo $tuple['about'].'<br>';
-	echo '</p>'; 
-	echo '</div>';
 	echo '</a>';
+	echo '</div>';
 }
 
 echo '</div>';
@@ -145,6 +142,20 @@ while ($tuple = $questions->fetch_assoc()) {
 }
 echo '</div>';
 */
+?>
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <ul>
+                    <li><a href="#"><strong>EmployMe</strong></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>© 2014 EmployMe</li>
+                </ul>
+            </footer>
+        </div>
+
+<?php
 mysqli_free_result($companies);
 
 mysqli_close($link);

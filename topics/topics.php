@@ -34,8 +34,8 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 									?>
 
-									<li><a href="<?php echo "../users/user.php?user=".$_SESSION['user']; ?>">your account</a></li>
-					                <li><a href="../users/log_out.php">sign out</a></li>
+					                <li><a href="../users/edit_user.php">edit account</a></li>
+<li><a href="../users/log_out.php">sign out</a></li>
 					                <?php
 									/*echo "Welcome ".$_SESSION["user"]."!\n";
 									echo "\n";
@@ -105,19 +105,18 @@ $topics = $topics_query->get_result();
 
 //$topic_query = "select * from topics;";
 //$topics = $link->query($topic_query) or die ('Topic Query Failed');
-
+echo '<br>';
 echo '<div>';
 while ($tuple = $topics->fetch_assoc()) {
+	echo '<div class="topic">';
 	echo '<a href="../topics/topic.php?id='.$tuple['topic_id'].'">';
-	echo '<div>';
-	echo '<p>';
 	echo $tuple['name'].'<br>';
 //	echo $tuple['about'].'<br>';
-	echo '</p>'; 
-	echo '</div>';	
 	echo '</a>';
+	echo '</div>';	
 }
 echo '</div>';
+echo '<br>';
 
 //query for all questions
 /*
@@ -145,6 +144,20 @@ while ($tuple = $questions->fetch_assoc()) {
 }
 echo '</div>';
 */
+?>
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <ul>
+                    <li><a href="#"><strong>EmployMe</strong></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>© 2014 EmployMe</li>
+                </ul>
+            </footer>
+        </div>
+
+<?php
 mysqli_free_result($topics);
 
 mysqli_close($link);
