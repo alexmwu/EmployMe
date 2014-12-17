@@ -73,6 +73,15 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+<div class="main grey">
+                <div class="main wrapper clearfix">
+                    <article>
+                        <h1>"This site rocks!" - Mark Zuckerberg</h1>
+                    </article>
+                </div>
+            </div> <!-- #main -->
+    
 <?php
 //query for all companies
 //no need to protect from SQL injections but will add just in case
