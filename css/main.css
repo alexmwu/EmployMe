@@ -64,6 +64,7 @@ textarea {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+	text-align: center;
 }
 
 .wrapper {
@@ -388,6 +389,16 @@ border-radius:5px;
 margin-bottom: 20px;
 resize:none;
 }
+
+.search{
+        text-align: left;
+        border-top: 1px solid black;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 200px;
+        margin-right: 200px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

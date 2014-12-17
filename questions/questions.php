@@ -153,6 +153,9 @@ else{
 }
 //$questions_query = "select * from questions;";
 //$questions = $link->query($question_query) or die ('Question Query Failed');
+	?>
+		<form action="search.php" method="post"><input name="content" placeholder="Search"></form>
+	<?php
 	if(!isset($_SESSION['user'])){
 		echo '<h1>Sign in/up to post a question to the forum</h1>';
 	}

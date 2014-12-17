@@ -103,8 +103,9 @@ $answers = $answers_query->get_result();
 	echo '<div id="questionContent">';
 	echo $tuple['content'];
 	echo '</div>';
+	echo '<br>';
 	echo '</p>'; 
-	echo "<h3>Asked by: ".$tuple['username'].'</h3>';
+	echo "<h3>Asked by: ".$tuple['username'].'</h3><br>';
 //	echo $tuple['votes'].'<br>';
 //}
 echo '<div class="edits">';
@@ -119,8 +120,11 @@ if(isset($_SESSION['user'])){
 
 if(isset($_SESSION['user'])){
         ?>
+<br>
 <h2>Answer the Question</h2>
 <textarea form="answer" name="editAnswer"> </textarea>
+<br>
+<br>
 <form class="edit" id="answer">
         <input type="button" value="Add Answer" onclick="<?php echo "post(1,".$_GET['id'].",this.form)";?> ">
 </form>
