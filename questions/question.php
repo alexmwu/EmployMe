@@ -103,9 +103,8 @@ $answers = $answers_query->get_result();
 	echo '<div id="questionContent">';
 	echo $tuple['content'];
 	echo '</div>';
-	echo '<br>';
 	echo '</p>'; 
-	echo "<h3>Asked by: ".$tuple['username'].'</h3><br>';
+	echo "<h3>Asked by: ".$tuple['username'].'</h3>';
 //	echo $tuple['votes'].'<br>';
 //}
 echo '<div class="edits">';
@@ -120,11 +119,8 @@ if(isset($_SESSION['user'])){
 
 if(isset($_SESSION['user'])){
         ?>
-<br>
 <h2>Answer the Question</h2>
 <textarea form="answer" name="editAnswer"> </textarea>
-<br>
-<br>
 <form class="edit" id="answer">
         <input type="button" value="Add Answer" onclick="<?php echo "post(1,".$_GET['id'].",this.form)";?> ">
 </form>
@@ -135,7 +131,7 @@ if(isset($_SESSION['user'])){
 ?>
         <div class="button-nav">
             <a href="questions.php?category=company&id=<?php echo $tuple['company_id'];?>">
-                <button class="btn "><?php echo $tuple['company_name'];?></button>
+                <button class="btn "><?php echo $tuple['company_name']; ?></button>
             </a>
             <a href="questions.php?category=topic&id=<?php echo $tuple['topic_id'];?>">
                 <button class="btn "><?php echo $tuple['topic_name'];?></button>

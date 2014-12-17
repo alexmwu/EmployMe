@@ -29,11 +29,12 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
                 <a href="../index.php"><h1 class="title">EmployMe</h1></a>
                 <nav>
                     <ul>
-                        <li><a href="post_question.php">post</a></li>                        		<?php
+			<?php
 								if(isset($_SESSION["user"])){
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 									?>
 
+                        			<li><a href="post_question.php">post</a></li>
 									<li><a href="../users/edit_user.php">edit account</a></li>
 					                <li><a href="../users/log_out.php">sign out</a></li>
 					                <?php
@@ -54,7 +55,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
                 </nav>
             </header>
         </div>
-
+<!--
 	<div class="button-nav">
 	    <a href="../companies/companies.php">
 		<button class="btn ">Companies</button>
@@ -66,7 +67,7 @@ $link = mysqli_connect('localhost', 'awu3', 'hellomysql', 'awu3') or die("Proble
 		<button class="btn ">Questions</button>
 	    </a>
 	</div>
-
+-->
 
 		<!-- banner for the site-->
     <!--[if lt IE 7]>
@@ -121,15 +122,40 @@ echo '</div>';
 */
 //query for all questions
 
-if(isset($_GET['category']))
+if(isset($_GET['category'])){
+	if($_GET['category']=='company'){
+		$cat=0;
+	}
+	else if($_GET['category']=='topic'){
+		$cat=1;
+	}
+	$id=$_GET['id'];
+}
 
-
-$questions_query = $link->prepare("SELECT * from questions");
-$questions_query->execute();
-$questions = $questions_query->get_result();
-
+if(isset($cat)){
+	if($cat==0){
+		$questions_query = $link->prepare("SELECT * from questions where company_id=? order by question_id desc");
+		$questions_query->bind_param("i",$id);
+		$questions_query->execute();
+		$questions = $questions_query->get_result();
+	}
+	else if($cat==1){
+		$questions_query = $link->prepare("SELECT * from questions where topic_id=? order by question_id desc");
+		$questions_query->bind_param("i",$id);
+		$questions_query->execute();
+		$questions = $questions_query->get_result();
+	}
+}
+else{
+	$questions_query = $link->prepare("SELECT * from questions order by question_id desc");
+	$questions_query->execute();
+	$questions = $questions_query->get_result();
+}
 //$questions_query = "select * from questions;";
 //$questions = $link->query($question_query) or die ('Question Query Failed');
+	if(!isset($_SESSION['user'])){
+		echo '<h1>Sign in/up to post a question to the forum</h1>';
+	}
 
 echo '<div>';	//div for right aligned block
 while ($tuple = $questions->fetch_assoc()) {

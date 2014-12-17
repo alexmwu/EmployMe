@@ -18,7 +18,7 @@ session_start()
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
-        <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
 
     </head>
@@ -37,7 +37,7 @@ session_start()
 									//echo "Welcome " . $_COOKIE["user"] . "!\n";
 									?>
 
-									<li><a href="<?php echo "users/user.php?user=".$_SESSION['user']; ?>">your account</a></li>
+									<li><a href="users/edit_user.php">edit account</a></li>
 					                <li><a href="users/log_out.php">sign out</a></li>
 					                <?php
 									/*echo "Welcome ".$_SESSION["user"]."!\n";
@@ -93,7 +93,7 @@ session_start()
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-        <script src="../js/main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
 

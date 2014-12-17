@@ -6,12 +6,11 @@ $link=mysqli_connect('localhost','awu3','hellomysql','awu3') or die("Problem con
 
 //use database awu3
 //mysql_select_db('awu3') or die('Could not use database!');
-
 //prepare statement
 date_default_timezone_set('America/New_York');
 date_default_timezone_get();
 $today=date("Y/m/d");
-$statement=$link->prepare("INSERT INTO questions (username,content,company_id,created,title) values(?,?,?,?,?);");
+$statement=$link->prepare("INSERT INTO questions (username,content,company_id,created,title,topic_id) values(?,?,?,?,?,?);");
 
 //find username
 if(isset($_SESSION['user'])){
@@ -21,14 +20,14 @@ else{
 }
 
 //bind
-$init=0;
-$statement->bind_param("ssiss",$user,$_POST['content'],$init/*query for company id here*/,$today,$_POST['title']);
+$statement->bind_param("ssissi",$user,$_POST['content'],$_POST['company_id']/*query for company id here*/,$today,$_POST['title'],$_POST['topic_id']);
 //need to work on query for company id
 
 
 //execute
 $statement->execute() or die("Failed to post question.");
 
+header("Location: questions.php");
 
 //close
 mysqli_close($link);

@@ -17,7 +17,6 @@ function post(post_type, page_id, form)
       data: 'post_type='+post_type+'&page_id='+page_id+'&content='+content,
       success: function(output) 
       {
-	output = output.replace('\\','');
           //alert('success, server says '+output);
       }, error: function()
       {
